@@ -1,5 +1,6 @@
 package com.jaycekon.dubbo.controller;
 
+import com.jaycekon.dubbo.domain.City;
 import com.jaycekon.dubbo.service.CityDubboConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,5 +20,11 @@ public class UserController {
     public Object saveUser() {
 
         return service.saveUser();
+    }
+
+    @RequestMapping("/find")
+    public City printCity() {
+
+        return service.printCity();
     }
 }

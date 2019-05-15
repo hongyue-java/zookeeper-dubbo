@@ -13,7 +13,7 @@ import com.jaycekon.dubbo.service.CityDubboService;
 @Service
 public class CityDubboServiceImpl implements CityDubboService {
 
-    public City findCityByName(String cityName) {
+    public City findCityByName() {
         return new City(1L,2L,"广州","是我的故乡");
     }
 }

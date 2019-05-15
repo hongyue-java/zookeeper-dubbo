@@ -19,17 +19,12 @@ public class CityDubboConsumerService {
     @Reference
     UserService userService;
 
-    public void printCity() {
-        String cityName = "广州";
-        City city = cityDubboService.findCityByName(cityName);
-        System.out.println(city.toString());
+    public City printCity() {
+        return cityDubboService.findCityByName();
     }
 
 
     public User saveUser() {
-        User user = new User();
-        user.setUsername("jaycekon")
-                .setPassword("jaycekong824");
-        return userService.saveUser(user);
+        return userService.saveUser();
     }
 }

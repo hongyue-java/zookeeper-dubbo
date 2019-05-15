@@ -14,8 +14,9 @@ import java.io.Serializable;
 @Getter
 @Setter
 @NoArgsConstructor
-@Accessors(chain = true)
 @AllArgsConstructor
+@Accessors(chain=true)
+
 public class User implements Serializable {
     private int id;
     private String username;

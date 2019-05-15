@@ -11,8 +11,9 @@ import com.jaycekon.dubbo.service.UserService;
 public class UserServiceImpl implements UserService {
 
     @Override
-    public User saveUser(User user) {
-        user.setId(1);
+    public User saveUser() {
+        User user = new User();
+        user.setId(1).setUsername("jaycekon").setPassword("jaycekong824");
         System.out.println(user.toString());
         return user;
     }

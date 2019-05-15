@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public class City implements Serializable {
 
-    private static final long serialVersionUID = -1L;
+    private static final long serialVersionUID = -1334130287823328249L;
 
     /**
      * 城市编号
@@ -30,6 +30,30 @@ public class City implements Serializable {
      * 描述
      */
     private String description;
+
+    public City() {
+    }
+
+    public City(Long id, Long provinceId, String cityName, String description) {
+        this.id = id;
+        this.provinceId = provinceId;
+        this.cityName = cityName;
+        this.description = description;
+    }
+
+
+    public String toString() {
+        return "City{" +
+                "id=" + id +
+                ", provinceId=" + provinceId +
+                ", cityName='" + cityName + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
     public Long getId() {
         return id;
@@ -61,15 +85,5 @@ public class City implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    @Override
-    public String toString() {
-        return "City{" +
-                "id=" + id +
-                ", provinceId=" + provinceId +
-                ", cityName='" + cityName + '\'' +
-                ", description='" + description + '\'' +
-                '}';
     }
 }
